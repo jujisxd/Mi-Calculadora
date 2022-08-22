@@ -49,6 +49,7 @@ public class Ventana extends javax.swing.JFrame {
         bt1 = new javax.swing.JLabel();
         btClean = new javax.swing.JLabel();
         btBorrar = new javax.swing.JLabel();
+        btPunto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(450, 450));
@@ -73,7 +74,7 @@ public class Ventana extends javax.swing.JFrame {
                 btIgualMouseClicked(evt);
             }
         });
-        panelFondo.add(btIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 40, 40));
+        panelFondo.add(btIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 40, 40));
 
         bt2.setBackground(new java.awt.Color(51, 51, 51));
         bt2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -97,7 +98,7 @@ public class Ventana extends javax.swing.JFrame {
                 btDividirMouseClicked(evt);
             }
         });
-        panelFondo.add(btDividir, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 40, 40));
+        panelFondo.add(btDividir, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 40, 40));
 
         bt4.setBackground(new java.awt.Color(51, 51, 51));
         bt4.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -193,7 +194,7 @@ public class Ventana extends javax.swing.JFrame {
                 btMultiplicarMouseClicked(evt);
             }
         });
-        panelFondo.add(btMultiplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 40, 40));
+        panelFondo.add(btMultiplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 40, 40));
 
         btMenos.setBackground(new java.awt.Color(51, 51, 51));
         btMenos.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -205,7 +206,7 @@ public class Ventana extends javax.swing.JFrame {
                 btMenosMouseClicked(evt);
             }
         });
-        panelFondo.add(btMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 40, 40));
+        panelFondo.add(btMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 40, 40));
 
         btMas.setBackground(new java.awt.Color(51, 51, 51));
         btMas.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -217,7 +218,7 @@ public class Ventana extends javax.swing.JFrame {
                 btMasMouseClicked(evt);
             }
         });
-        panelFondo.add(btMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 40, 40));
+        panelFondo.add(btMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 40, 40));
 
         bt3.setBackground(new java.awt.Color(51, 51, 51));
         bt3.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -253,7 +254,7 @@ public class Ventana extends javax.swing.JFrame {
                 btCleanMouseClicked(evt);
             }
         });
-        panelFondo.add(btClean, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 40, 40));
+        panelFondo.add(btClean, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 40, 40));
 
         btBorrar.setBackground(new java.awt.Color(51, 51, 51));
         btBorrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -264,7 +265,18 @@ public class Ventana extends javax.swing.JFrame {
                 btBorrarMouseClicked(evt);
             }
         });
-        panelFondo.add(btBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 110, 40));
+        panelFondo.add(btBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 120, 40));
+
+        btPunto.setBackground(new java.awt.Color(57, 57, 57));
+        btPunto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btPunto.setText(".");
+        btPunto.setOpaque(true);
+        btPunto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btPuntoMouseClicked(evt);
+            }
+        });
+        panelFondo.add(btPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -443,6 +455,14 @@ public class Ventana extends javax.swing.JFrame {
         lbPantalla.setText(texto);
     }//GEN-LAST:event_btBorrarMouseClicked
 
+    /**
+     * Método diseñado para escribir un punto para decimales
+     * @param evt click al botón que tiene un punto.
+     */
+    private void btPuntoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btPuntoMouseClicked
+        lbPantalla.setText(this.lbPantalla.getText() + ".");
+    }//GEN-LAST:event_btPuntoMouseClicked
+
     
     /**
      * @param args the command line arguments
@@ -497,6 +517,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel btMas;
     private javax.swing.JLabel btMenos;
     private javax.swing.JLabel btMultiplicar;
+    private javax.swing.JLabel btPunto;
     private javax.swing.JLabel lbPantalla;
     private javax.swing.JPanel panelFondo;
     private javax.swing.JTextField tfPantalla;
